@@ -1,1 +1,1 @@
-# Automated Book Drawing for AudiobookProduction:A Benchmark and Comparative Study from Heuristics to LLMs
+# Automated Book Drawing for Audiobook Production:A Benchmark and Comparative Study from Heuristics to LLMs
