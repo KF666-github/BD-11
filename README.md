@@ -1,7 +1,9 @@
 # Automated Book Drawing for Audiobook Production:A Benchmark and Comparative Study from Heuristics to LLMs
 
 We revisit the task of speaker attribution in narrative texts from the underexplored perspective of industrial-scale audiobook production, and define Automated Book Drawing (ABD) as a structured solution to meet its unique annotation challenges. Motivated by the high cost and inconsistency of manual annotation in voice acting workflows, we formalize ABD as a multi-class classification task grounded in discourse reasoning. To support systematic research, we introduce BD-11, a highquality Chinese benchmark dataset comprising 58,818 annotated dialogues from 11 diverse web novels, with dialogues categorized into easy and hard cases based on attribution difficulty. We benchmark three representative paradigms: (1) a heuristic method using named entity proximity; (2) a BERT-based Machine Reading Comprehension (MRC) model that treats attribution as a span extraction task; and (3) a prompt-based framework using ChatGPT with zero-shot, few-shot, and chain-of-thought prompting.
+# BD-11 Dataset
 
+# Methods
 ## Heuristic Rule-based Approach
 The heuristic method assigns each dialogue to the nearest character mention within a defined context window. Using Named Entity Recognition (HanLP, MSRA NER ELECTRA SMALL ZH), person entities are extracted, and the closest external name to the dialogue is selected as the speaker.
 
