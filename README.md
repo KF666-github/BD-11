@@ -6,9 +6,11 @@ We revisit the task of speaker attribution in narrative texts from the underexpl
 # Methods
 ## Heuristic Rule-based Approach
 The heuristic method assigns each dialogue to the nearest character mention within a defined context window. Using Named Entity Recognition (HanLP, MSRA NER ELECTRA SMALL ZH), person entities are extracted, and the closest external name to the dialogue is selected as the speaker.
+![Alt Text](./imgs/Heuristic Rule-based Approach.jpg)
 
 ## BERT-based Machine Reading Comprehension Approach
 The BERT-based MRC model formulates speaker attribution as a span extraction task: given a paragraph and the question “Who is the speaker of this dialogue?”, the model identifies the speaker’s name as a text span. We fine-tune the Chinese BERT-base model using the HuggingFace Transformers framework, optimizing hyperparameters through grid search on learning rate and batch size based on development set F1.
+![Alt Text](./imgs/BERT-based Machine Reading Comprehension Approach.jpg)
 
 ## LLM-driven Prompt Engineering Approaches
 The LLM-based approach uses ChatGPT-3.5-turbo for ABD through prompt engineering. It applies four prompting strategies: Zero-shot, Few-shot, Chain of Thought (CoT), and Self-Consistency to improve reasoning and robustness. The method performs well on long contexts and implicit cues but may yield inconsistent results due to non-deterministic outputs and sensitivity to phrasing.
